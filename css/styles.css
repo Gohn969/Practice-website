@@ -163,8 +163,17 @@ a {
   height: 40px;
 }
 
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
 .icon--primary {
   fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -175,6 +184,10 @@ a {
   height: 64px;
   justify-content: center;
   width: 64px;
+}
+
+.icon--accent {
+  background: var(--color-accent);
 }
 
 /* buttons */
@@ -405,13 +418,13 @@ a {
   margin-top: 0;
 }
 
-.quote .media__title {
+.quote__author {
   font-size: 3.5rem;
   font-weight: 600;
   margin-bottom: 0;
 }
 
-.quote .media__text {
+.org {
   font-size: 2.5rem;
   opacity: 0.4;
 }
@@ -420,10 +433,10 @@ a {
   .quote {
     font-size: 2rem;
   }
-  .quote .media__title {
+  .quote__author {
     font-size: 2.4rem;
   }
-  .quote .media__text {
+  .org {
     font-size: 1.6rem;
   }
 }
@@ -442,5 +455,38 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--col3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* testimonial */
+
+.testimonial {
+  padding: 3rem;
+  overflow: visible;
+}
+
+.testimonial-img {
+  position: relative;
+}
+
+.testimonial-img > img {
+  width: 100%;
+}
+
+.testimonial-img > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial .quote {
+    margin-left: 6rem;
   }
 }
