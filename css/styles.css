@@ -26,6 +26,12 @@ body {
   line-height: 1.5;
 }
 
+/* container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 /* Typography */
 h1,
 h2,
@@ -567,4 +573,38 @@ a {
 .collapsible--expanded .collapsible__content {
   max-height: 100vh;
   opacity: 1;
+}
+
+/* block section */
+
+.block {
+  --padding-verticle: 6rem;
+  padding: var(--padding-verticle) 2rem;
+}
+
+.block__heading {
+  margin: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  padding-bottom: calc(var(--padding-verticle) + 4rem);
+}
+
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  padding-bottom: calc(var(--padding-verticle) + 4rem);
+}
+
+.block__header {
+  text-align: center;
 }
